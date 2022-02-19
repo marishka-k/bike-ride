@@ -1,4 +1,8 @@
 .page {
+	position: relative;
+	max-width: 1440px;
+	margin: 0 auto;
+	box-sizing: border-box;
 	background-color: $primary-color;
 	color: $primary-text-color;
 	font-family: $font-family-primary;

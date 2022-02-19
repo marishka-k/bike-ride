@@ -1,7 +1,8 @@
 @import '../modules/vendor/normalize';
 @import '../modules/vendor/fonts';
-@import '../modules/colors/colors';
-@import '../modules/blocks/page';
+@import '../modules/variables/variables';
+@import '../modules/mixins/mixins';
+@import '../modules/blocks/index';
 
 
 

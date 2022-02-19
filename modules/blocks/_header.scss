@@ -1,0 +1,51 @@
+.header {
+	background-color: $primary-color;
+	box-sizing: border-box;
+	width: 100%;
+	height: 74px;
+	top: 0;
+	left: 0;
+	padding: 28px 0;
+	position: fixed;
+	z-index: 3;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	&__list {
+		@include resetStyles;
+		display: grid;
+		padding-right: 120px;
+		list-style-type: none;
+		color: $primary-text-color;
+		font-weight: $mediumFont;
+		font-size: 14px;
+		line-height: 1.29;
+		grid-template-columns: repeat(3, max-content);
+		gap: 34px;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		transition: $transition-opacity;
+
+		&:hover {
+			opacity: $primary-opacity;
+		}
+	}
+
+	&__burger {
+		display: none;
+	}
+
+	@media all and (max-width: $phones) {
+		&__list {
+			display: none;
+		}
+
+		&__burger {
+			display: flex;
+		}
+	}
+}
