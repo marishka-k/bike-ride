@@ -359,7 +359,6 @@ template {
   font-family: "Inter";
 }
 .page {
-  position: relative;
   max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -407,7 +406,7 @@ template {
 .header__burger {
   display: none;
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 768px) {
   .header__list {
     display: none;
   }
@@ -420,40 +419,70 @@ template {
   box-sizing: border-box;
   display: grid;
   row-gap: 120px;
-  padding-top: 94px;
+  margin-top: 94px;
   padding-left: 120px;
 }
 
-.lead {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+@media all and (max-width: 1200px) {
+  .main {
+    padding: 74px 18px 0;
+  }
 }
-.lead__text {
-  max-width: 430px;
-  min-width: -webkit-min-content;
-  min-width: -moz-min-content;
-  min-width: min-content;
-}
-.lead__title {
+.section-title {
   margin: 0;
   padding: 0;
-  margin: 80px 0 50px;
+  max-width: 430px;
   font-weight: 700;
   font-size: 55px;
   line-height: 1.09;
   letter-spacing: -0.5px;
 }
-.lead__info {
+.section-title_place_lead {
+  margin-top: 60px;
+}
+
+@media all and (max-width: 1200px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+  .section-title_place_lead {
+    margin-top: 40px;
+  }
+}
+.section-subtitle {
   margin: 0;
   padding: 0;
-  margin-bottom: 50px;
+  max-width: 430px;
   color: #222222;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
+  opacity: 0.7;
+}
+
+@media all and (max-width: 1200px) {
+  .section-subtitle {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
+.lead {
+  display: grid;
+  grid-template: repeat(4, auto)/repeat(2, 1fr);
+  gap: 50px;
+  grid-template-areas: "section-title lead-image" "section-subtitle lead-image" "lead-button lead-image" "lead-caption lead-image";
+}
+.lead__text {
+  padding-top: 80px;
+  max-width: 430px;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
 }
 .lead__button {
+  grid-area: lead-button;
   color: #ffffff;
   width: 180px;
   height: 50px;
@@ -468,9 +497,11 @@ template {
 }
 .lead__caption {
   display: flex;
+  grid-area: lead-caption;
   margin: 0;
   padding: 0;
-  margin-top: 167px;
+  margin-top: 117px;
+  margin-bottom: 209px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
@@ -485,25 +516,190 @@ template {
   background-color: #d7d4d4;
 }
 .lead__image {
+  position: relative;
   width: 100%;
   max-width: 610px;
+  grid-area: lead-image;
   height: 836px;
   justify-self: end;
   background-image: url("../images/leadimage.jpg");
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
+  background-size: cover;
 }
-.lead__sticky-image {
+.lead__sticky-block {
   position: -webkit-sticky;
   position: sticky;
-  top: 347px;
+  box-sizing: border-box;
+  top: 0;
+  margin-top: 347px;
   margin-bottom: 79px;
-  width: 440px;
+  max-width: 440px;
   height: 300px;
-  background-image: url("../images/leadimage.jpg");
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  background-image: url("../images/CannondaleSystemsixHimod.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   -o-object-fit: cover;
      object-fit: cover;
-  background-repeat: no-repeat;
+  padding: 20px 50px;
   transform: translate(-200px, 0);
+}
+
+@media all and (max-width: 1200px) {
+  .lead {
+    display: grid;
+    grid-template: repeat(4, auto)/1fr;
+    gap: 40px;
+    grid-template-areas: "section-title" "lead-image" "section-subtitle" "lead-button";
+  }
+  .lead__button {
+    width: 100%;
+    height: 46px;
+  }
+  .lead__caption {
+    display: none;
+  }
+  .lead__image {
+    height: 348px;
+    background-size: contain;
+  }
+  .lead__sticky-block {
+    margin-top: 123px;
+    margin-bottom: 37px;
+    max-width: 234px;
+    height: 160px;
+    transform: translate(-30px, 0);
+    padding: 11px 27px;
+  }
+}
+.merckx {
+  display: grid;
+  grid-template: repeat(4, auto)/repeat(2, 1fr);
+  gap: 20px;
+}
+.merckx__image {
+  width: 100%;
+  max-width: 650px;
+  height: 460px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.merckx__content {
+  padding: 0 60px 0 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.merckx__word {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.29;
+  letter-spacing: -0.5px;
+}
+.merckx__name {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.merckx__profession {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.75;
+  opacity: 0.75;
+  color: #222222;
+}
+
+.coverage {
+  width: 100%;
+}
+.coverage__slider {
+  overflow: hidden;
+}
+.coverage__cards {
+  margin: 0;
+  padding: 0;
+  max-width: 1320px;
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  transition: all ease 1s;
+}
+.coverage__card {
+  display: none;
+}
+.coverage__card_active {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+.coverage__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.coverage__image {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+.coverage__image_type_highway {
+  position: relative;
+}
+.coverage__image_type_highway::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 0;
+  bottom: 16px;
+  background-image: url(../images/highway-icon.png);
+}
+.coverage__image_type_gravel {
+  position: relative;
+}
+.coverage__image_type_gravel::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 0;
+  bottom: 16px;
+  background-image: url(../images/gravel-icon.png);
+}
+.coverage__image_type_tt {
+  position: relative;
+}
+.coverage__image_type_tt::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 0;
+  bottom: 16px;
+  background-image: url(../images/tt-icon.png);
+}
+.coverage__second-image {
+  display: block;
+}
+
+@media all and (max-width: 1200px) {
+  .coverage__images {
+    grid-template-columns: 1fr;
+  }
+  .coverage__second-image {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

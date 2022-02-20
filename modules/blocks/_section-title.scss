@@ -1,0 +1,23 @@
+.section-title {
+	@include resetStyles;
+	max-width: 430px;
+	font-weight: $boldFont;
+	font-size: 55px;
+	line-height: 1.09;
+	letter-spacing: -0.5px;
+
+	&_place_lead {
+		margin-top: 60px;
+	}
+}
+
+@media all and (max-width: $desctop) {
+	.section-title {
+		font-size: 32px;
+		line-height: 1.25;
+
+		&_place_lead {
+			margin-top: 40px;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.merckx {
+	@include grid;
+	gap: 20px;
+
+	&__image{
+		width: 100%;
+		max-width: 650px;
+		height: 460px;
+		object-fit: cover;
+	}
+
+	&__content {
+		padding: 0 60px 0 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__word {
+		@include resetStyles;
+		font-weight: $semiboldFont;
+		font-size: 34px;
+		line-height: 1.29;
+		letter-spacing: -0.5px;
+	}
+
+	&__name {
+		@include resetStyles;
+		font-weight: $mediumFont;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	&__profession {
+		@include resetStyles;
+		font-weight: $mediumFont;
+		font-size: 16px;
+		line-height: 1.75;
+		opacity: $primary-opacity;
+		color: $secordary-text-color;
+	}
+
+
+}

@@ -39,7 +39,7 @@
 		display: none;
 	}
 
-	@media all and (max-width: $phones) {
+	@media all and (max-width: $tablets) {
 		&__list {
 			display: none;
 		}
