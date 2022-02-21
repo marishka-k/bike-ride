@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./styles/styles.css" />
 	<title>Путешествуем на велосипедах</title>
 
@@ -100,24 +101,86 @@
 						</div>
 					</li>
 				</ul>
+				<div class="coverage__buttons">
+					<button class="coverage__button coverage__button_type_prev">
+						<img src="./images/button-prev.svg" alt="Назад">
+					</button>
+					<button class="coverage__button coverage__button_type_next">
+						<img src="./images/button-next.svg" alt="Вперед">
+					</button>
+				</div>
 			</div>
-			<div class="coverage__buttons">
-				<button class="coverage__button coverage__button_type_prev">
-					<img src="./images/button-prev.svg" alt="Назад">
-				</button>
-				<button class="coverage__button coverage__button_type_next">
-					<img src="./images/button-next.svg" alt="Вперед">
-				</button>
+		</section>
+		<section class="bike" id="bike">
+			<div class="bike__menu">
+				<h2 class="section-title">Велосипеды</h2>
+				<nav class="bike__tipes">
+					<button class="bike__tipe bike__tipe_active">Шоссе</button>
+					<button class="bike__tipe">Грэвел</button>
+					<button class="bike__tipe">TT</button>
+				</nav>
+				<ul class="bike__list">
+					<li class="bike__tipe bike__tipe_active">Шоссе</li>
+					<li class="bike__tipe">Грэвел</li>
+					<li class="bike__tipe">TT</li>
+				</ul>
 			</div>
+			<ul class="swiper-container bike__sliders">
+				<li class="swiper-wrapper bike__cards bike__cards_active">
+					<div class="swiper-slide bike__card">
+						<img src="./images/CerveloCaledonia-5.jpg" alt="модель Cervelo Caledonia-5" class="bike__image">
+						<a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" class="bike__link">Cervelo Caledonia-5</a>
+					</div>
+					<div class="swiper-slide bike__card">
+						<img src="./images/CannondaleSystemsixHimod.jpg" alt="модель Cannondale Systemsix Himod" class="bike__image">
+						<a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" class="bike__link">Cannondale Systemsix Himod</a>
+					</div>
+					<div class="swiper-slide bike__card">
+						<img src="./images/TrekDomaneSL-7.jpg" alt="модель Trek Domane SL-7" class="bike__image">
+						<a href="—  https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF" class="bike__link">Trek Domane SL-7</a>
+					</div>
+				</li>
+				<li class="swiper-wrapper bike__cards">
+					<div class="swiper-slide bike__card">
+						<img src="./images/CerveloAsperoGRX810.jpg" alt="модель Cervelo Aspero GRX 810" class="bike__image">
+						<a href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE" class="bike__link">Cervelo Aspero GRX 810</a>
+					</div>
+					<div class="swiper-slide bike__card">
+						<img src="./images/SpecializedS-WorksDiverge.jpg" alt="модель Specialized S-Works Diverge" class="bike__image">
+						<a href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9" class="bike__link">Specialized S-Works Diverge</a>
+					</div>
+					<div class="swiper-slide bike__card">
+						<img src="./images/CannondaleTopstoneLefty3.png" alt="модель Cannondale Topstone Lefty 3" class="bike__image">
+						<a href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8" class="bike__link">Cannondale Topstone Lefty 3</a>
+					</div>
+				</li>
+				<li class="swiper-wrapper bike__cards">
+					<div class="swiper-slide bike__card">
+						<img src="./images/SpecializedS-WorksShiv.jpg" alt="модель Specialized S-Works Shiv" class="bike__image">
+						<a href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9" class="bike__link">Specialized S-Works Shiv</a>
+					</div>
+					<div class="swiper-slide bike__card">
+						<img src="./images/BMCTimemachine01ONE.jpg" alt="модель BMC Timemachine 01 ONE" class="bike__image">
+						<a href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835" class="bike__link">BMC Timemachine 01 ONE</a>
+					</div>
+					<div class="swiper-slide bike__card">
+						<img src="./images/CerveloP-Series.jpg" alt="модель Cervelo P-Series" class="bike__image">
+						<a href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q" class="bike__link">Cervelo P-Series</a>
+					</div>
+				</li>
+			</ul>
+		</section>
 
-
+		<section class="training" id="training">
 
 		</section>
 
+
 	</main>
 
-
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="./script/slider.js" defer=""></script>
+
 </body>
 
 </html>
