@@ -3,20 +3,19 @@
 	padding: 0;
 }
 
-@mixin grid {
-	display: grid;
-	grid-template: repeat(4, auto) / repeat(2, 1fr);
-}
-
-@mixin gridMobile {
-	display: grid;
-	grid-template: repeat(4, auto) / 1fr;
-}
-
 @mixin coverageIcon {
 	position: absolute;
 	width: 100px;
 	height: 40px;
 	left: 0;
 	bottom: 16px;
+	background-size: cover;
+}
+
+@mixin coverageIconMobile {
+	position: absolute;
+	width: 70px;
+	height: 28px;
+	left: 0;
+	bottom: 14px;
 }

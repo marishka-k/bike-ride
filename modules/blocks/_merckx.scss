@@ -1,6 +1,7 @@
 .merckx {
-	@include grid;
-	gap: 20px;
+	display: grid;
+	grid-template-columns: 45% 1fr;
+	gap: 80px;
 
 	&__image{
 		width: 100%;
@@ -10,7 +11,7 @@
 	}
 
 	&__content {
-		padding: 0 60px 0 120px;
+		max-width: 470px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -38,7 +39,38 @@
 		line-height: 1.75;
 		opacity: $primary-opacity;
 		color: $secordary-text-color;
+
+		&_theme_dark{
+			color: $secordary-text-color-dark;
+		}
 	}
-
-
 }
+
+@media all and (max-width: $tablets) {
+	.merckx {
+		grid-template-columns: 1fr;
+		gap: 40px;
+
+		&__word {
+			@include resetStyles;
+			font-weight: $semiboldFont;
+			font-size: 23px;
+			line-height: 1.26;
+			letter-spacing: -0.5px;
+			margin-bottom: 40px;
+		}
+
+		&__name {
+			font-size: 14px;
+			line-height: 1.57;
+		}
+
+		&__profession {
+			font-size: 10px;
+			line-height: 1.6;
+		}
+
+
+	}
+}
+

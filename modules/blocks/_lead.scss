@@ -1,11 +1,44 @@
 .lead {
-	@include grid;
-	gap: 50px;
-	grid-template-areas:
-		"section-title lead-image"
-		"section-subtitle lead-image"
-		"lead-button lead-image"
-		"lead-caption lead-image";
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 838px;
+	align-content: space-between;
+	row-gap: 50px;
+
+	&__image {
+		position: relative;
+		grid-area: lead-image;
+		width: 100%;
+		max-width: 610px;
+		height: 836px;
+		justify-self: end;
+		background-image: url("../images/leadimage.jpg");
+		object-fit: cover;
+		background-repeat: no-repeat;
+		background-size: cover;
+		order: 5;
+	}
+
+	&__sticky-block {
+		position: sticky;
+		box-sizing: border-box;
+		top: 0;
+		margin-top: 347px;
+		margin-bottom: 79px;
+		max-width: 440px;
+		height: 300px;
+		background-color: $primary-color;
+		border-radius: 20px;
+		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
+		background-image: url("../images/CannondaleSystemsixHimod.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		object-fit: cover;
+		padding: 20px 50px;
+		transform: translate(-200px, 0);
+	}
 
 	&__text {
 		padding-top: 80px;
@@ -16,6 +49,7 @@
 	&__button {
 		grid-area: lead-button;
 		color: $primary-text-color-dark;
+		order: 3;
 		width: 180px;
 		height: 50px;
 		border: none;
@@ -35,10 +69,10 @@
 		grid-area: lead-caption;
 		@include resetStyles;
 		margin-top: 117px;
-		margin-bottom: 209px;
 		font-weight: $regularFont;
 		font-size: 18px;
 		line-height: 1;
+		order: 4;
 
 		&::after {
 			content: "";
@@ -50,55 +84,62 @@
 			background-color: #d7d4d4;
 		}
 	}
-
-	&__image {
-		position: relative;
-		width: 100%;
-		max-width: 610px;
-		grid-area: lead-image;
-		height: 836px;
-		justify-self: end;
-		background-image: url("../images/leadimage.jpg");
-		object-fit: cover;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	&__sticky-block {
-		position: sticky;
-		box-sizing: border-box;
-		top: 0;
-		margin-top: 347px;
-		margin-bottom: 79px;
-		max-width: 440px;
-		height: 300px;
-		background-color: $primary-color;
-		border-radius: 20px;
-		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-		background-image: url("../images/CannondaleSystemsixHimod.jpg");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		object-fit: cover;
-		padding: 20px 50px;
-		transform: translate(-200px, 0);
-	}
 }
 
 @media all and (max-width: $desctop) {
 	.lead {
-		@include gridMobile;
-		gap: 40px;
-		grid-template-areas:
-			"section-title"
-			"lead-image"
-			"section-subtitle"
-			"lead-button";
+		&__caption {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		&__sticky-block {
+			margin-top: 200px;
+			margin-bottom: 40px;
+			max-width: 320px;
+			height: 220px;
+			transform: translate(-30px, 0);
+			padding: 11px 27px;
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.lead {
 
 		&__button {
 			width: 100%;
 			height: 46px;
 		}
+
+		&__caption {
+			display: none;
+		}
+
+		&__image {
+			width: 100%;
+			height: 348px;
+			background-size: cover;
+			background-position-x: right;
+			background-position-y: center;
+			order: 2;
+		}
+
+		&__sticky-block {
+			margin-top: 123px;
+			margin-bottom: 37px;
+			max-width: 234px;
+			height: 160px;
+			transform: translate(-30px, 0);
+			padding: 11px 27px;
+		}
+	}
+}
+
+@media all and (max-width: $phones) {
+	.lead {
+		height: auto;
+
 
 		&__caption {
 			display: none;

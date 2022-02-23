@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 120px;
+	min-width: 0;
 
 	&__menu {
 		display: flex;
@@ -11,6 +12,8 @@
 	&__tipes {
 		display: flex;
 		column-gap: 40px;
+		margin-right: 120px;
+		order: 2;
 	}
 
 	&__tipe {
@@ -43,23 +46,47 @@
 	&__list {
 		display: none;
 		@include resetStyles;
-		list-style-type: none;
+		width: 114px;
+		height: 30px;
+		font-weight: $semiboldFont;
+		font-size: 11px;
+		line-height: 1.27;
+		border-radius: 2px;
+		border-color: #e3e3e3;
+		background-color: inherit;
+		order: 2;
 	}
 
 	&__sliders {
 		@include resetStyles;
-		list-style-type: none;
-	}
-	&__cards {
 		display: none;
-		margin-bottom: 90px;
+		overflow: hidden;
+		position: relative;
+
+		& .swiper-pagination {
+			bottom: 40px;
+		}
+
+		& .swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+		}
+
+		& .swiper-pagination-bullet-active {
+			background: $primary-text-color;
+		}
 
 		&_active {
-			display: grid;
-			width: 100%;
-			grid-template-columns: repeat(3, 1fr);
-			column-gap: 30px;
+			display: block;
 		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-bottom: 90px;
+		width: 100%;
+		max-width: max-content;
 	}
 
 	&__card {
@@ -71,9 +98,10 @@
 
 	&__image {
 		width: 100%;
+		object-fit: cover;
 		box-sizing: border-box;
 		border-radius: 20px;
-		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+		box-shadow: 0px 20px 140px rgba(0, 0, 0, 0.06);
 		max-width: 380px;
 		padding: 20px;
 		background-color: $primary-color;
@@ -86,5 +114,74 @@
 		font-weight: $semiboldFont;
 		font-size: 18px;
 		line-height: 1.22;
+	}
+}
+
+@media all and (max-width: $laptop) {
+	.bike {
+		&__card {
+			border-radius: 20px;
+			background-color: $primary-color;
+			box-shadow: 0px 20px 140px rgba(0, 0, 0, 0.06);
+			padding: 15px;
+			row-gap: 0;
+		}
+
+		&__tipes {
+			margin-right: 40px;
+		}
+
+		&__image {
+			padding: 0;
+			border-radius: 0;
+			box-shadow: none;
+		}
+
+		&__link {
+			justify-self: center;
+			font-size: 14px;
+			line-height: 1.29;
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.bike {
+		&__menu {
+			flex-direction: column;
+			row-gap: 40px;
+		}
+
+		&__tipes {
+			display: none;
+		}
+
+		&__list {
+			display: block;
+		}
+
+		&__image {
+			justify-self: center;
+		}
+
+		&__link {
+			font-size: 14px;
+			line-height: 1.29;
+		}
+	}
+}
+
+@media all and (max-width: $phones) {
+	.bike {
+		&__card {
+			max-width: 255px;
+		}
+
+		&__sliders {
+			& .swiper-pagination-bullet {
+				width: 4px;
+				height: 4px;
+			}
+		}
 	}
 }

@@ -1,6 +1,6 @@
 const cards = document.querySelectorAll(".coverage__card");
-const buttonPrev = document.querySelector(".coverage__button_type_prev");
-const buttonNext = document.querySelector(".coverage__button_type_next");
+const buttonsPrev = document.querySelectorAll(".coverage__button_type_prev");
+const buttonsNext = document.querySelectorAll(".coverage__button_type_next");
 
 let index = 0;
 
@@ -31,5 +31,9 @@ function openPrevCard() {
 	}
 }
 
-buttonNext.addEventListener("click", openNextCard);
-buttonPrev.addEventListener("click", openPrevCard);
+buttonsNext.forEach((element) => {
+	element.addEventListener("click", openNextCard);
+});
+buttonsPrev.forEach((element) => {
+	element.addEventListener("click", openPrevCard);
+});
