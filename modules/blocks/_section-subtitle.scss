@@ -1,7 +1,7 @@
 .section-subtitle {
 	@include resetStyles;
 	display: block;
-	max-width: 460px;
+	max-width: 440px;
 	color: $secordary-text-color;
 	font-weight: $regularFont;
 	font-size: 18px;
@@ -21,6 +21,17 @@
 	}
 }
 
+@media all and (max-width: $laptop) {
+	.section-subtitle {
+		&_place_lead {
+			max-width: 284px;
+			font-size: 12px;
+			line-height: 1.8;
+			order: 4;
+		}
+	}
+}
+
 @media all and (max-width: $tablets) {
 	.section-subtitle {
 		max-width: 284px;
@@ -32,7 +43,7 @@
 		}
 
 		&_place_lead {
-			order: 3;
+			order: 4;
 		}
 	}
 }
