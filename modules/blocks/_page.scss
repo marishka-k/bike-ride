@@ -6,6 +6,7 @@
 	background-color: $primary-color;
 	color: $primary-text-color;
 	font-family: $font-family-primary;
+	transition: all 0.5s linear ;
 
 	&_theme_dark {
 		background-color: $primary-color-dark;

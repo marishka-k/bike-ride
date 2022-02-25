@@ -27,6 +27,16 @@
 			background-image: url(../images/dark-theme-light.svg);
 			background-repeat: no-repeat;
 		}
+
+		&_theme_dark {
+			&::before {
+				background-image: url(../images/light-theme-dark.svg);
+			}
+
+			&::after {
+				background-image: url(../images/dark-theme-dark.svg);
+			}
+		}
 	}
 
 	&__btn {

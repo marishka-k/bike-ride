@@ -32,9 +32,21 @@
 			opacity: $secordary-opacity;
 		}
 
+		&_theme_dark {
+			color: $secordary-text-color-dark;
+			&:hover {
+				opacity: $secordary-opacity-dark;
+			}
+		}
+
+		&_theme_dark-active {
+			&:hover {
+				opacity: $primary-opacity-dark;
+			}
+		}
 		&_active {
 			font-weight: $semiboldFont;
-			color: $primary-text-color;
+			color: inherit;
 			opacity: 1;
 
 			&:hover {
@@ -110,7 +122,7 @@
 	&__link {
 		@include resetStyles;
 		text-decoration: none;
-		color: $primary-text-color;
+		color: inherit;
 		font-weight: $semiboldFont;
 		font-size: 18px;
 		line-height: 1.22;

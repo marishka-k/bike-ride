@@ -17,10 +17,20 @@ function activeBikeSliders() {
 	}
 }
 
+function removeActivThemeDark(n) {
+	if (page.classList.contains("page_theme_dark")) {
+		bikeTipes.forEach(element => {
+		element.classList.remove("bike__tipe_theme_dark-active");
+	});
+	n.classList.add("bike__tipe_theme_dark-active");
+}
+}
+
 function openBikesHighway() {
 	activeBikeSliders();
 	bikesHighway.classList.add("bike__sliders_active");
 	bikePlaceHighway.classList.add("bike__tipe_active");
+	removeActivThemeDark(bikePlaceHighway);
 	bikeList.value = "Шоссе";
 }
 
@@ -28,6 +38,7 @@ function openBikesGravel() {
 	activeBikeSliders();
 	bikesGravel.classList.add("bike__sliders_active");
 	bikePlaceGravel.classList.add("bike__tipe_active");
+	removeActivThemeDark(bikePlaceGravel);
 	bikeList.value = "Грэвел";
 }
 
@@ -35,6 +46,7 @@ function openBikesTt() {
 	activeBikeSliders();
 	bikesTt.classList.add("bike__sliders_active");
 	bikePlaceTt.classList.add("bike__tipe_active");
+	removeActivThemeDark(bikePlaceTt);
 	bikeList.value = "TT";
 }
 

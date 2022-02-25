@@ -7,6 +7,11 @@
 	height: 424px;
 	row-gap: 50px;
 
+	&_theme_dark {
+		background-color: #2F2F2F;
+
+	}
+
 	&__title {
 		@include resetStyles;
 		display: block;
@@ -25,11 +30,27 @@
 		background-color: inherit;
 		border: 1px solid rgba(199, 199, 199, 0.5);
 		border-radius: 4px;
+
+		&_theme_dark {
+			border: 1px solid rgba(125, 125, 125, 0.5);
+		}
 	}
 
 	&__block {
 		margin-top: 50px;
 		display: flex;
 		justify-content: space-between;
+	}
+
+	&__caption {
+		@include resetStyles;
+		color: #CFCFCF;
+		font-weight: $semiboldFont;
+		font-size: 14px;
+		line-height: 1.4;
+
+		&_theme_dark {
+			color: #565656;
+		}
 	}
 }
