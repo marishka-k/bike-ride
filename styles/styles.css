@@ -1114,11 +1114,11 @@ template {
 .bike__link {
   margin: 0;
   padding: 0;
-  color: inherit;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.22;
   text-decoration: none;
+  color: #151515;
 }
 
 @media all and (max-width: 1200px) {

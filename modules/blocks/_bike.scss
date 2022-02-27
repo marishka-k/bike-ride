@@ -135,11 +135,11 @@
 
 	&__link {
 		@include resetStyles;
-		color: inherit;
 		font-weight: $semiboldFont;
 		font-size: 18px;
 		line-height: 1.22;
 		text-decoration: none;
+		color: $primary-text-color;
 	}
 }
 
