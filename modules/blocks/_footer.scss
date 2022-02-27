@@ -1,11 +1,11 @@
 .footer {
-	padding: 80px 0 60px 120px;
-	box-sizing: border-box;
-	background-color: #efefef;
 	display: flex;
 	flex-direction: column;
-	height: 424px;
 	row-gap: 50px;
+	box-sizing: border-box;
+	height: 424px;
+	padding: 80px 0 60px 120px;
+	background-color: #efefef;
 
 	&_theme_dark {
 		background-color: #2f2f2f;
@@ -14,22 +14,22 @@
 	&__title {
 		@include resetStyles;
 		display: block;
+		max-width: 230px;
 		font-weight: $semiboldFont;
 		font-size: 24px;
 		line-height: 1.33;
-		max-width: 230px;
 	}
 
 	&__input-block {
 		display: flex;
-		justify-content: space-between;
 		flex-wrap: wrap;
+		justify-content: space-between;
 		box-sizing: border-box;
-		border-radius: 4px;
-		border: 1px solid rgba(199, 199, 199, 0.5);
 		width: 360px;
 		height: 50px;
 		padding: 11px 20px;
+		border: 1px solid rgba(199, 199, 199, 0.5);
+		border-radius: 4px;
 
 		&_active {
 			border: 1px solid rgba(199, 199, 199, 1);
@@ -46,11 +46,11 @@
 
 	&__input {
 		@include resetStyles;
+		display: block;
+		width: 298px;
 		font-weight: 500;
 		font-size: 13px;
 		line-height: 2.15%;
-		display: block;
-		width: 298px;
 		background-color: inherit;
 		border: none;
 
@@ -78,6 +78,7 @@
 			&::placeholder {
 				color: $secordary-text-color-dark;
 			}
+
 			&:hover::placeholder {
 				color: $primary-text-color-dark;
 				opacity: 1;
@@ -87,13 +88,14 @@
 
 	&__button {
 		display: none;
-		@include resetStyles;
+		color: inherit;
 		font-weight: $mediumFont;
 		font-size: 13px;
 		line-height: 2.15;
-		border: none;
 		background-color: inherit;
-		color: inherit;
+		border: none;
+
+		@include resetStyles;
 
 		&_active {
 			display: block;
@@ -109,10 +111,10 @@
 	}
 
 	&__block {
-		margin-top: 40px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-top: 40px;
 	}
 
 	&__caption {
@@ -141,14 +143,14 @@
 
 @media all and (max-width: $tablets) {
 	.footer {
-		padding: 60px 18px 25px;
-		height: 358px;
 		row-gap: 40px;
+		height: 358px;
+		padding: 60px 18px 25px;
 
 		&__title {
+			max-width: 230px;
 			font-size: 24px;
 			line-height: 1.33;
-			max-width: 230px;
 		}
 	}
 }

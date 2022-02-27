@@ -1,39 +1,41 @@
 .header {
-	background-color: inherit;
-	margin: 0 auto;
-	box-sizing: border-box;
-	max-width: inherit;
-	width: 100%;
-	height: 74px;
-	top: 0;
-	padding: 28px 0;
 	position: fixed;
+	top: 0;
 	z-index: 3;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: inherit;
+	height: 74px;
+	margin: 0 auto;
+	padding: 28px 0;
+	background-color: inherit;
 
 	&__list {
-		@include resetStyles;
 		display: none;
-		list-style-type: none;
+
+		@include resetStyles;
 		color: inherit;
 		font-weight: $mediumFont;
 		font-size: 14px;
 		line-height: 1.29;
+		list-style-type: none;
 
 		&_plase_header {
 			display: grid;
-			padding-right: 120px;
 			grid-template-columns: repeat(3, max-content);
 			gap: 34px;
+			padding-right: 120px;
 		}
 
 		&_plase_burger {
-			background-color: $primary-color;
+			display: none;
 			font-size: 18px;
 			line-height: 1;
-			display: none;
+			background-color: $primary-color;
+
 
 			&_theme_dark {
 				background-color: $primary-color-dark;
@@ -46,8 +48,8 @@
 	}
 
 	&__link {
-		text-decoration: none;
 		color: inherit;
+		text-decoration: none;
 		transition: $transition-opacity;
 
 		&:hover {
@@ -84,7 +86,6 @@
 		display: none;
 		width: 22px;
 		height: 22px;
-
 		background-image: url(../images/closeburger-light.svg);
 
 		&_theme_dark {
@@ -93,8 +94,8 @@
 
 		&_active {
 			display: block;
-			cursor: pointer;
 			background-position: center;
+			cursor: pointer;
 			transition: $transition-opacity;
 
 			&:hover {
@@ -125,18 +126,19 @@
 
 			&_plase_burger {
 				position: absolute;
-				height: 566px;
+				top: 74px;
+				right: 0;
+				left: 0;
 				flex-direction: column;
+				align-items: center;
 				row-gap: 34px;
 				width: 100%;
+				height: 566px;
 				margin: 0 auto;
 				padding: 70px 0 0;
-				top: 74px;
-				left: 0;
-				right: 0;
-				align-items: center;
 			}
 		}
+
 		&__burger {
 			display: flex;
 			flex-direction: column;

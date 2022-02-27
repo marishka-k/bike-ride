@@ -5,17 +5,17 @@
 
 @mixin coverageIcon {
 	position: absolute;
+	bottom: 16px;
+	left: 0;
 	width: 100px;
 	height: 40px;
-	left: 0;
-	bottom: 16px;
 	background-size: cover;
 }
 
 @mixin coverageIconMobile {
 	position: absolute;
+	bottom: 14px;
+	left: 0;
 	width: 70px;
 	height: 28px;
-	left: 0;
-	bottom: 14px;
 }

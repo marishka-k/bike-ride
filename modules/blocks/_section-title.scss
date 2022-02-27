@@ -1,9 +1,9 @@
 .section-title {
 	@include resetStyles;
 	display: block;
+	order: 1;
 	max-width: 440px;
 	font-weight: $boldFont;
-	order: 1;
 	font-size: 55px;
 	line-height: 1.09;
 	letter-spacing: -0.5px;
@@ -26,10 +26,10 @@
 
 @media all and (max-width: $tablets) {
 	.section-title {
-		max-width: max-content;
 		width: 100%;
+		max-width: max-content;
 		padding-top: 40px;
-		border-top: 1px solid #E3E3E3;
-		}
+		border-top: 1px solid #e3e3e3;
+	}
 }
 

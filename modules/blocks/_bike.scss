@@ -11,21 +11,21 @@
 
 	&__tipes {
 		display: flex;
-		column-gap: 40px;
 		order: 2;
+		column-gap: 40px;
 	}
 
 	&__tipe {
 		@include resetStyles;
-		border: none;
 		color: $secordary-text-color;
 		font-weight: $semiboldFont;
 		font-size: 18px;
 		line-height: 1.56;
+		background-color: inherit;
+		border: none;
+		cursor: pointer;
 		opacity: 0.7;
 		transition: opacity 0.5s linear;
-		background-color: inherit;
-		cursor: pointer;
 
 		&:hover {
 			opacity: $secordary-opacity;
@@ -33,6 +33,7 @@
 
 		&_theme_dark {
 			color: $secordary-text-color-dark;
+
 			&:hover {
 				opacity: $secordary-opacity-dark;
 			}
@@ -43,9 +44,10 @@
 				opacity: $primary-opacity-dark;
 			}
 		}
+
 		&_active {
-			font-weight: $semiboldFont;
 			color: inherit;
+			font-weight: $semiboldFont;
 			opacity: 1;
 
 			&:hover {
@@ -56,37 +58,36 @@
 
 	&__list {
 		display: none;
-		@include resetStyles;
+		order: 2;
 		width: 114px;
 		height: 30px;
 		color: inherit;
 		font-weight: $semiboldFont;
 		font-size: 11px;
 		line-height: 1.27;
-		border-radius: 2px;
-		border-color: #e3e3e3;
 		background-color: inherit;
-		order: 2;
+		border-color: #e3e3e3;
+		border-radius: 2px;
+		@include resetStyles;
 	}
 
 	&__list-item {
-		background-color: $primary-color;
 		color: inherit;
+		background-color: $primary-color;
 
 		&_theme_dark {
 			background-color: $primary-color-dark;
 		}
-
 	}
 
 	&__sliders {
 		@include resetStyles;
+		position: relative;
 		display: none;
 		overflow: hidden;
-		position: relative;
 
 		& .swiper-pagination {
-			bottom: 0px;
+			bottom: 0;
 			z-index: 0;
 		}
 
@@ -109,36 +110,36 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		box-sizing: border-box;
+		width: 100%;
 		margin-top: 120px;
 		margin-bottom: 90px;
-		width: 100%;
 	}
 
 	&__card {
 		display: grid;
-		box-sizing: border-box;
 		row-gap: 22px;
-		min-height: 0;
+		box-sizing: border-box;
 		height: min-content;
-		}
+		min-height: 0;
+	}
 
 	&__image {
-		width: 100%;
-		object-fit: cover;
 		box-sizing: border-box;
-		border-radius: 20px;
-		box-shadow: 0px 20px 140px rgba(0, 0, 0, 0.06);
+		width: 100%;
 		padding: 20px;
 		background-color: $primary-color;
+		border-radius: 20px;
+		box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+		object-fit: cover;
 	}
 
 	&__link {
 		@include resetStyles;
-		text-decoration: none;
 		color: inherit;
 		font-weight: $semiboldFont;
 		font-size: 18px;
 		line-height: 1.22;
+		text-decoration: none;
 	}
 }
 
@@ -156,11 +157,11 @@
 		}
 
 		&__card {
-			border-radius: 20px;
-			background-color: $primary-color;
-			box-shadow: 0px 20px 140px rgba(0, 0, 0, 0.06);
-			padding: 15px;
 			row-gap: 0;
+			padding: 15px;
+			background-color: $primary-color;
+			border-radius: 20px;
+			box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
 		}
 
 		&__tipes {
@@ -202,7 +203,7 @@
 			padding-bottom: 30px;
 
 			& .swiper-pagination {
-				bottom: 0px;
+				bottom: 0;
 			}
 
 			& .swiper-pagination-bullet {

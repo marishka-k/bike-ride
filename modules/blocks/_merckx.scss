@@ -11,10 +11,10 @@
 	}
 
 	&__content {
-		max-width: 470px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		max-width: 470px;
 	}
 
 	&__word {
@@ -35,11 +35,11 @@
 	&__profession {
 		@include resetStyles;
 		margin-bottom: 10px;
+		color: $secordary-text-color;
 		font-weight: $regularFont;
 		font-size: 16px;
 		line-height: 1.75;
 		opacity: $primary-opacity;
-		color: $secordary-text-color;
 
 		&_theme_dark {
 			color: $secordary-text-color-dark;
@@ -54,11 +54,11 @@
 
 		&__word {
 			@include resetStyles;
+			margin-bottom: 40px;
 			font-weight: $semiboldFont;
 			font-size: 23px;
 			line-height: 1.26;
 			letter-spacing: -0.5px;
-			margin-bottom: 40px;
 		}
 
 		&__name {
@@ -73,8 +73,8 @@
 		}
 
 		&__image {
-			padding-top: 20px;
 			max-height: 204px;
+			padding-top: 20px;
 			border-top: 1px solid #e3e3e3;
 		}
 	}

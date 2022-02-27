@@ -7,11 +7,11 @@
 
 	&__cards {
 		@include resetStyles;
+		position: relative;
+		display: flex;
 		grid-area: coverage__cards;
 		max-width: 1320px;
 		list-style-type: none;
-		display: flex;
-		position: relative;
 		transition: all ease 1s;
 	}
 
@@ -27,8 +27,8 @@
 
 	&__images {
 		display: grid;
-		order: 3;
 		grid-template-columns: repeat(2, 1fr);
+		order: 3;
 		gap: 40px;
 	}
 
@@ -41,7 +41,7 @@
 			position: relative;
 
 			&::after {
-				content: "";
+				content: '';
 				@include coverageIcon;
 				background-image: url(../images/highway-icon.png);
 			}
@@ -51,7 +51,7 @@
 			position: relative;
 
 			&::after {
-				content: "";
+				content: '';
 				@include coverageIcon;
 				background-image: url(../images/gravel-icon.png);
 			}
@@ -61,7 +61,7 @@
 			position: relative;
 
 			&::after {
-				content: "";
+				content: '';
 				@include coverageIcon;
 				background-image: url(../images/tt-icon.png);
 			}
@@ -74,24 +74,24 @@
 
 	&__buttons {
 		display: flex;
-		order: 5;
 		grid-area: coverage-buttons;
-		column-gap: 20px;
+		order: 5;
 		margin-top: 5px;
+		column-gap: 20px;
 	}
 
 	&__button {
-		border: none;
 		display: flex;
 		justify-content: center;
+		align-content: center;
 		align-items: center;
-		border-radius: 50%;
 		width: 50px;
 		height: 50px;
 		background-color: #ebebeb;
-		object-fit: cover;
-		align-content: center;
+		border: none;
+		border-radius: 50%;
 		transition: background-color 0.2s linear;
+		object-fit: cover;
 
 		&:hover {
 			background-color: rgba(235, 235, 235, 0.6);
@@ -100,9 +100,9 @@
 
 	&__button-image {
 		display: block;
-		padding: 21px;
 		width: 7px;
 		height: 16px;
+		padding: 21px;
 		transition: $transition-opacity;
 
 		&:hover {
@@ -136,32 +136,33 @@
 		&__image {
 			&_type_highway {
 				&::after {
-					content: "";
+					content: '';
 					@include coverageIconMobile;
 				}
 			}
 
 			&_type_gravel {
 				&::after {
-					content: "";
+					content: '';
 					@include coverageIconMobile;
 				}
 			}
 
 			&_type_tt {
 				&::after {
-					content: "";
+					content: '';
 					@include coverageIconMobile;
 				}
 			}
 		}
+
 		&__buttons {
 			order: 1;
-			margin: 0;
-			column-gap: 10px;
-			margin-top: 0;
 			align-self: end;
+			margin: 0;
+			margin-top: 0;
 			margin-bottom: 7px;
+			column-gap: 10px;
 		}
 
 		&__button {
