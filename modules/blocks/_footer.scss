@@ -112,7 +112,7 @@
 		margin-top: 40px;
 		display: flex;
 		justify-content: space-between;
-		align-items: baseline;
+		align-items: center;
 	}
 
 	&__caption {
@@ -126,16 +126,46 @@
 			color: #565656;
 		}
 	}
+
+	&__logo {
+		display: none;
+		width: 38px;
+		height: 38px;
+		background-image: url(../images/footelogo-light.svg);
+
+		&_theme_dark {
+			background-image: url(../images/footelogo-dark.svg);
+		}
+	}
 }
 
 @media all and (max-width: $tablets) {
 	.footer {
 		padding: 60px 18px 25px;
+		height: 358px;
+		row-gap: 40px;
 
 		&__title {
 			font-size: 24px;
 			line-height: 1.33;
 			max-width: 230px;
+		}
+	}
+}
+
+@media all and (max-width: $phones) {
+	.footer {
+		&__input-block {
+			width: 284px;
+		}
+
+		&__input {
+			width: 226px;
+		}
+
+
+		&__logo {
+			display: block;
 		}
 	}
 }

@@ -59,6 +59,7 @@
 		@include resetStyles;
 		width: 114px;
 		height: 30px;
+		color: inherit;
 		font-weight: $semiboldFont;
 		font-size: 11px;
 		line-height: 1.27;
@@ -66,6 +67,16 @@
 		border-color: #e3e3e3;
 		background-color: inherit;
 		order: 2;
+	}
+
+	&__list-item {
+		background-color: $primary-color;
+		color: inherit;
+
+		&_theme_dark {
+			background-color: $primary-color-dark;
+		}
+
 	}
 
 	&__sliders {
@@ -210,7 +221,7 @@
 		}
 
 		&__cards {
-			margin-top: 20px;
+			margin-top: 0;
 			margin-bottom: 0;
 		}
 	}

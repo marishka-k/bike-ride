@@ -362,6 +362,7 @@ template {
   max-width: 1440px;
   min-width: 320px;
   margin: 0 auto;
+  position: relative;
   box-sizing: border-box;
   background-color: #f4f4f4;
   color: #151515;
@@ -482,7 +483,7 @@ template {
     flex-direction: column;
     row-gap: 34px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
     padding: 70px 0 0;
     top: 74px;
     left: 0;
@@ -1045,6 +1046,7 @@ template {
   padding: 0;
   width: 114px;
   height: 30px;
+  color: inherit;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.27;
@@ -1052,6 +1054,13 @@ template {
   border-color: #e3e3e3;
   background-color: inherit;
   order: 2;
+}
+.bike__list-item {
+  background-color: #f4f4f4;
+  color: inherit;
+}
+.bike__list-item_theme_dark {
+  background-color: #333333;
 }
 .bike__sliders {
   margin: 0;
@@ -1175,7 +1184,7 @@ template {
     line-height: 1.29;
   }
   .bike__cards {
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -1396,7 +1405,7 @@ template {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 .footer__caption {
   margin: 0;
@@ -1409,15 +1418,37 @@ template {
 .footer__caption_theme_dark {
   color: #565656;
 }
+.footer__logo {
+  display: none;
+  width: 38px;
+  height: 38px;
+  background-image: url(../images/footelogo-light.svg);
+}
+.footer__logo_theme_dark {
+  background-image: url(../images/footelogo-dark.svg);
+}
 
 @media all and (max-width: 768px) {
   .footer {
     padding: 60px 18px 25px;
+    height: 358px;
+    row-gap: 40px;
   }
   .footer__title {
     font-size: 24px;
     line-height: 1.33;
     max-width: 230px;
+  }
+}
+@media all and (max-width: 480px) {
+  .footer__input-block {
+    width: 284px;
+  }
+  .footer__input {
+    width: 226px;
+  }
+  .footer__logo {
+    display: block;
   }
 }
 .switch {

@@ -6,9 +6,11 @@ const headerListPlaseBurger = document.querySelector(".header__list_plase_burger
 const footer = document.querySelector(".footer");
 const footerInputBlock = document.querySelector(".footer__input-block");
 const footerInput = document.querySelector(".footer__input");
+const footerLogo = document.querySelector(".footer__logo");
 const footerCaption = document.querySelector(".footer__caption");
 const subtitleSections = document.querySelectorAll(".section-subtitle");
 const merckxProfession = document.querySelector(".merckx__profession");
+const bikeListItems = document.querySelectorAll(".bike__list-item");
 const activeBikeTipes = document.querySelectorAll(".bike__tipe_active");
 const switchContents = document.querySelectorAll(".switch__content");
 
@@ -20,6 +22,7 @@ function switchTheme() {
 	footer.classList.toggle("footer_theme_dark");
 	footerInputBlock.classList.toggle("footer__input-block_theme_dark");
 	footerInput.classList.toggle("footer__input_theme_dark");
+	footerLogo.classList.toggle("footer__logo_theme_dark");
 	footerCaption.classList.toggle("footer__caption_theme_dark");
 	merckxProfession.classList.toggle("merckx__profession_theme_dark");
 	switchBtns.forEach((element) => {
@@ -27,6 +30,9 @@ function switchTheme() {
 	});
 	subtitleSections.forEach((element) => {
 		element.classList.toggle("section-subtitle_theme_dark");
+	});
+	bikeListItems.forEach((element) => {
+		element.classList.toggle("bike__list-item_theme_dark");
 	});
 	bikeTipes.forEach((element) => {
 		element.classList.toggle("bike__tipe_theme_dark");
