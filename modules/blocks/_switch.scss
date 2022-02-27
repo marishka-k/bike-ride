@@ -1,6 +1,13 @@
 .switch {
 	height: 24px;
-	display: flex;
+
+	&_place_header {
+		display: none;
+	}
+	&_place_footer {
+		display: flex;
+		margin-right: 164px;
+	}
 
 	&__content {
 		text-align: center;
@@ -41,27 +48,27 @@
 
 	&__btn {
 		display: inline-block;
-		width: 44px; /* ширина */
-		height: 24px; /* высота */
-		border-radius: 19px; /* радиус скругления */
-		background: $primary-text-color-dark; /* цвет фона */
+		width: 44px;
+		height: 24px;
+		border-radius: 19px;
+		background: $primary-text-color-dark;
 		z-index: 0;
 		margin: 0;
 		padding: 0;
 		border: none;
 		cursor: pointer;
 		position: relative;
-		transition-duration: 300ms; /* анимация */
+		transition-duration: 300ms;
 
 		&::after {
 			content: "";
-			height: 20px; /* высота кнопки */
-			width: 20px; /* ширина кнопки */
+			height: 20px;
+			width: 20px;
 			border-radius: 17px;
-			background: #24b47e; /* цвет кнопки */
-			top: 2px; /* положение кнопки по вертикали относительно основы */
-			left: 2px; /* положение кнопки по горизонтали относительно основы */
-			transition-duration: 300ms; /* анимация */
+			background: #24b47e;
+			top: 2px;
+			left: 2px;
+			transition-duration: 300ms;
 			position: absolute;
 			z-index: 1;
 		}
@@ -73,6 +80,28 @@
 				content: "";
 				left: 22px;
 			}
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.switch {
+		&_place_footer {
+			margin-right: 44px;
+		}
+	}
+}
+
+@media all and (max-width: $phones) {
+	.switch {
+		&_place_header {
+			display: flex;
+			justify-self: flex-end;
+			margin-top: 316px;
+		}
+
+		&_place_footer {
+			display: none;
 		}
 	}
 }

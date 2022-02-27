@@ -1,5 +1,5 @@
 .footer {
-	padding: 80px 120px 60px;
+	padding: 80px 0 60px 120px;
 	box-sizing: border-box;
 	background-color: #efefef;
 	display: flex;
@@ -8,8 +8,7 @@
 	row-gap: 50px;
 
 	&_theme_dark {
-		background-color: #2F2F2F;
-
+		background-color: #2f2f2f;
 	}
 
 	&__title {
@@ -21,36 +20,122 @@
 		max-width: 230px;
 	}
 
-	&__input {
-		display: block;
+	&__input-block {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		border-radius: 4px;
+		border: 1px solid rgba(199, 199, 199, 0.5);
 		width: 360px;
 		height: 50px;
-		box-sizing: border-box;
 		padding: 11px 20px;
-		background-color: inherit;
-		border: 1px solid rgba(199, 199, 199, 0.5);
-		border-radius: 4px;
 
-		&_theme_dark {
+		&_active {
+			border: 1px solid rgba(199, 199, 199, 1);
+		}
+
+		&__theme_dark {
 			border: 1px solid rgba(125, 125, 125, 0.5);
+		}
+
+		&_type_invalid {
+			border: 1px solid #ff0000;
 		}
 	}
 
+	&__input {
+		@include resetStyles;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 2.15%;
+		display: block;
+		width: 298px;
+		background-color: inherit;
+		border: none;
+
+		&:focus {
+			outline: 0;
+		}
+
+		&::placeholder {
+			color: $secordary-text-color;
+			opacity: 0.7;
+			transition: opacity 0.3s ease;
+		}
+
+		&:hover::placeholder {
+			color: inherit;
+			opacity: 1;
+		}
+
+		&:focus:hover::placeholder {
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		&_theme_dark {
+			&::placeholder {
+				color: $secordary-text-color-dark;
+			}
+			&:hover::placeholder {
+				color: $primary-text-color-dark;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__button {
+		display: none;
+		@include resetStyles;
+		font-weight: $mediumFont;
+		font-size: 13px;
+		line-height: 2.15;
+		border: none;
+		background-color: inherit;
+		color: inherit;
+
+		&_active {
+			display: block;
+			cursor: pointer;
+		}
+	}
+
+	&__error {
+		color: #ff0000;
+		font-weight: $mediumFont;
+		font-size: 13px;
+		line-height: 2.15;
+	}
+
 	&__block {
-		margin-top: 50px;
+		margin-top: 40px;
 		display: flex;
 		justify-content: space-between;
+		align-items: baseline;
 	}
 
 	&__caption {
 		@include resetStyles;
-		color: #CFCFCF;
+		color: #cfcfcf;
 		font-weight: $semiboldFont;
 		font-size: 14px;
 		line-height: 1.4;
 
 		&_theme_dark {
 			color: #565656;
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.footer {
+		padding: 60px 18px 25px;
+
+		&__title {
+			font-size: 24px;
+			line-height: 1.33;
+			max-width: 230px;
 		}
 	}
 }

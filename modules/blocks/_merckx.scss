@@ -1,9 +1,9 @@
 .merckx {
 	display: grid;
-	grid-template-columns: 45% 1fr;
-	gap: 80px;
+	grid-template-columns: 50% 1fr;
+	gap: 70px;
 
-	&__image{
+	&__image {
 		width: 100%;
 		max-width: 650px;
 		height: 460px;
@@ -34,13 +34,14 @@
 
 	&__profession {
 		@include resetStyles;
-		font-weight: $mediumFont;
+		margin-bottom: 10px;
+		font-weight: $regularFont;
 		font-size: 16px;
 		line-height: 1.75;
 		opacity: $primary-opacity;
 		color: $secordary-text-color;
 
-		&_theme_dark{
+		&_theme_dark {
 			color: $secordary-text-color-dark;
 		}
 	}
@@ -66,11 +67,15 @@
 		}
 
 		&__profession {
+			margin-bottom: 0;
 			font-size: 10px;
 			line-height: 1.6;
 		}
 
-
+		&__image {
+			padding-top: 20px;
+			max-height: 204px;
+			border-top: 1px solid #e3e3e3;
+		}
 	}
 }
-

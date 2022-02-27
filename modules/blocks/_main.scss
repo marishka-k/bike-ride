@@ -7,7 +7,12 @@
 
 @media all and (max-width: $desctop) {
 	.main {
-		padding: 74px 18px 0;
+		padding: 74px 18px 60px;
 	}
+}
 
+@media all and (max-width: $tablets) {
+	.main {
+		row-gap: 80px;
+		}
 }

@@ -76,8 +76,8 @@
 		display: flex;
 		order: 5;
 		grid-area: coverage-buttons;
-		gap: 20px;
-		margin-top: 50px;
+		column-gap: 20px;
+		margin-top: 5px;
 	}
 
 	&__button {
@@ -118,6 +118,10 @@
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
+
+			&_active {
+				row-gap: 40px;
+			}
 		}
 
 		&__images {
@@ -154,16 +158,29 @@
 		&__buttons {
 			order: 1;
 			margin: 0;
+			column-gap: 10px;
+			margin-top: 0;
+			align-self: end;
+			margin-bottom: 7px;
 		}
 
 		&__button {
-			width: 10px;
-			height: 10px;
+			width: 24px;
+			height: 24px;
 		}
 
 		&__button-image {
 			width: 4.5px;
 			height: 10px;
+		}
+	}
+}
+
+@media all and (max-width: $phones-small) {
+	.coverage {
+		&__image {
+			width: 284px;
+			height: 175px;
 		}
 	}
 }

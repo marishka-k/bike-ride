@@ -53,7 +53,7 @@
 		border: none;
 		border-radius: 4px;
 		background: linear-gradient(to left, #24b47e 50%, #319e75 50%) right;
-		background-size: 200%;
+		background-size: 100%;
 		cursor: pointer;
 		transition: background-position 0.5s ease-out;
 
@@ -126,6 +126,7 @@
 @media all and (max-width:  $tablets) {
 	.lead {
 		height: auto;
+		row-gap: 40px;
 
 		&__button {
 			width: 100%;

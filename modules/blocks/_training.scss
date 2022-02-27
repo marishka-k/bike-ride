@@ -3,14 +3,14 @@
 	flex-wrap: wrap;
 	flex-direction: column;
 	row-gap: 50px;
-	max-height: 460px;
+	height: 460px;
 
 	&__links {
 		display: flex;
 		column-gap: 30px;
 		order: 3;
 		justify-self: end;
-		margin-top: 130px
+		margin-top: 130px;
 	}
 
 	&__link {
@@ -29,10 +29,46 @@
 	}
 
 	&__image {
-		max-width: 580px;
+		min-width: 44%;
+		align-self: flex-end;
 		max-height: 460px;
 		order: 4;
 		object-fit: cover;
 		margin-right: 120px;
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.training {
+		flex-wrap: nowrap;
+		height: auto;
+		row-gap: 40px;
+
+		&__links {
+			order: 4;
+			margin-top: 0;
+		}
+
+		&__link {
+			font-size: 14px;
+			line-height: 1.43;
+		}
+		&__image {
+			margin: 0;
+			align-self: center;
+			min-width: 44%;
+			width: 100%;
+			max-height: 225px;
+			order: 2;
+		}
+	}
+}
+
+@media all and (max-width: $phones-small) {
+	.training {
+		&__image {
+			margin: 0;
+			width: 284px;
+		}
 	}
 }

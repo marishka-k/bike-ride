@@ -1,8 +1,8 @@
 .bike {
 	display: flex;
 	flex-direction: column;
-	row-gap: 120px;
 	min-width: 0;
+	padding-right: 120px;
 
 	&__menu {
 		display: flex;
@@ -12,7 +12,6 @@
 	&__tipes {
 		display: flex;
 		column-gap: 40px;
-		margin-right: 120px;
 		order: 2;
 	}
 
@@ -76,7 +75,8 @@
 		position: relative;
 
 		& .swiper-pagination {
-			bottom: 40px;
+			bottom: 0px;
+			z-index: 0;
 		}
 
 		& .swiper-pagination-bullet {
@@ -90,23 +90,26 @@
 
 		&_active {
 			display: block;
+			width: 100%;
 		}
 	}
 
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+		box-sizing: border-box;
+		margin-top: 120px;
 		margin-bottom: 90px;
 		width: 100%;
-		max-width: max-content;
 	}
 
 	&__card {
 		display: grid;
+		box-sizing: border-box;
 		row-gap: 22px;
 		min-height: 0;
 		height: min-content;
-	}
+		}
 
 	&__image {
 		width: 100%;
@@ -114,7 +117,6 @@
 		box-sizing: border-box;
 		border-radius: 20px;
 		box-shadow: 0px 20px 140px rgba(0, 0, 0, 0.06);
-		max-width: 380px;
 		padding: 20px;
 		background-color: $primary-color;
 	}
@@ -129,8 +131,19 @@
 	}
 }
 
+@media all and (max-width: $desctop) {
+	.bike {
+		padding-right: 0;
+	}
+}
+
 @media all and (max-width: $laptop) {
 	.bike {
+		&__cards {
+			margin-top: 90px;
+			margin-bottom: 40px;
+		}
+
 		&__card {
 			border-radius: 20px;
 			background-color: $primary-color;
@@ -159,6 +172,8 @@
 
 @media all and (max-width: $tablets) {
 	.bike {
+		row-gap: 20px;
+
 		&__menu {
 			flex-direction: column;
 			row-gap: 40px;
@@ -172,6 +187,19 @@
 			display: block;
 		}
 
+		&__sliders {
+			padding-bottom: 30px;
+
+			& .swiper-pagination {
+				bottom: 0px;
+			}
+
+			& .swiper-pagination-bullet {
+				width: 4px;
+				height: 4px;
+			}
+		}
+
 		&__image {
 			justify-self: center;
 		}
@@ -180,20 +208,18 @@
 			font-size: 14px;
 			line-height: 1.29;
 		}
+
+		&__cards {
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
 	}
 }
 
 @media all and (max-width: $phones) {
 	.bike {
-		&__card {
-			max-width: 255px;
-		}
-
-		&__sliders {
-			& .swiper-pagination-bullet {
-				width: 4px;
-				height: 4px;
-			}
+		&__cards {
+			max-width: 284px;
 		}
 	}
 }

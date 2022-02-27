@@ -19,11 +19,11 @@ function activeBikeSliders() {
 
 function removeActivThemeDark(n) {
 	if (page.classList.contains("page_theme_dark")) {
-		bikeTipes.forEach(element => {
-		element.classList.remove("bike__tipe_theme_dark-active");
-	});
-	n.classList.add("bike__tipe_theme_dark-active");
-}
+		bikeTipes.forEach((element) => {
+			element.classList.remove("bike__tipe_theme_dark-active");
+		});
+		n.classList.add("bike__tipe_theme_dark-active");
+	}
 }
 
 function openBikesHighway() {
@@ -67,11 +67,13 @@ new Swiper(".bike__sliders", {
 		clickable: true,
 	},
 
+
 	breakpoints: {
 		320: { slidesPerView: 1 },
 		480: { slidesPerView: 2, spaceBetween: 10 },
 		992: { slidesPerView: 3, spaceBetween: 30 },
 	},
+
 	preloadImages: false,
 
 	lazy: {

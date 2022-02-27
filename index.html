@@ -14,7 +14,7 @@
 <body class="page">
 	<header class="header">
 		<nav>
-			<ul class="header__list">
+			<ul class="header__list header__list_plase_header">
 				<li>
 					<a href="#coverage" class="header__link">Покрытия и градиенты</a>
 				</li>
@@ -27,8 +27,10 @@
 			</ul>
 		</nav>
 		<div class="header__burger">
+			<div class="header__burger-open header__burger-open_active"></div>
+			<div class="header__burger-close"></div>
 			<nav>
-				<ul class="header__list">
+				<ul class="header__list header__list_plase_burger">
 					<li>
 						<a href="#coverage" class="header__link">Покрытия и градиенты</a>
 					</li>
@@ -38,8 +40,14 @@
 					<li>
 						<a href="#training" class="header__link">Тренировки</a>
 					</li>
+					<li class="switch switch_place_header ">
+						<div class="switch__content">
+							<div class="switch__btn"></div>
+						</div>
+					</li>
 				</ul>
 			</nav>
+
 		</div>
 
 	</header>
@@ -149,18 +157,18 @@
 			</div>
 			<div class="swiper-container bike__sliders bike__sliders_active" id="bikes-highway">
 				<div class="swiper-wrapper bike__cards">
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/CerveloCaledonia-5.jpg" alt="модель Cervelo Caledonia-5" class="bike__image">
 						<a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
 							class="bike__link">Cervelo Caledonia-5</a>
 					</div>
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/CannondaleSystemsixHimod.jpg" alt="модель Cannondale Systemsix Himod"
 							class="bike__image">
 						<a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
 							class="bike__link">Cannondale Systemsix Himod</a>
 					</div>
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/TrekDomaneSL-7.jpg" alt="модель Trek Domane SL-7" class="bike__image">
 						<a href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
 							class="bike__link">Trek Domane SL-7</a>
@@ -171,18 +179,18 @@
 
 			<div class="swiper-container bike__sliders" id="bikes-gravel">
 				<div class="swiper-wrapper bike__cards">
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/CerveloAsperoGRX810.jpg" alt="модель Cervelo Aspero GRX 810" class="bike__image">
 						<a href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE"
 							class="bike__link">Cervelo Aspero GRX 810</a>
 					</div>
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/SpecializedS-WorksDiverge.jpg" alt="модель Specialized S-Works Diverge"
 							class="bike__image">
 						<a href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9"
 							class="bike__link">Specialized S-Works Diverge</a>
 					</div>
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/CannondaleTopstoneLefty3.png" alt="модель Cannondale Topstone Lefty 3"
 							class="bike__image">
 						<a href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"
@@ -194,17 +202,17 @@
 
 			<div class="swiper-container bike__sliders" id="bikes-tt">
 				<div class="swiper-wrapper bike__cards">
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/SpecializedS-WorksShiv.jpg" alt="модель Specialized S-Works Shiv" class="bike__image">
 						<a href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9"
 							class="bike__link">Specialized S-Works Shiv</a>
 					</div>
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/BMCTimemachine01ONE.jpg" alt="модель BMC Timemachine 01 ONE" class="bike__image">
 						<a href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835"
 							class="bike__link">BMC Timemachine 01 ONE</a>
 					</div>
-					<div class="swiper-slide bike__card">
+					<div class="bike__card swiper-slide">
 						<img src="./images/CerveloP-Series.jpg" alt="модель Cervelo P-Series" class="bike__image">
 						<a href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"
 							class="bike__link">Cervelo P-Series</a>
@@ -220,20 +228,26 @@
 			<p class="section-subtitle section-subtitle_place_coverage">Чтобы найти маршрут для тренировки можно
 				воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение
 				позволит построить тренировочный план.</p>
-			<nav class="training__links">
+			<div class="training__links">
 				<a href="https://www.komoot.com" class="training__link" target="_blank">Strava</a>
 				<a href="https://www.strava.com" class="training__link" target="_blank">Komoot</a>
-			</nav>
+			</div>
 			<img src="./images/trainig-road.jfif" alt="Дорога" class="training__image">
 		</section>
 	</main>
 
 	<footer class="footer">
 		<p class="footer__title">Подпишитесь на рассылку —</p>
-		<input type="e-mail" placeholder="Ваш e-mail" class="footer__input">
+		<div>
+			<div class="footer__input-block">
+				<input type="e-mail" placeholder="Ваш e-mail" class="footer__input">
+				<button type="submit" class="footer__button">ok</button>
+			</div>
+			<div id="error" class="footer__error"></div>
+		</div>
 		<div class="footer__block">
 			<p class="footer__caption">© Road Club 2021</p>
-			<div class="switch">
+			<div class="switch switch_place_footer">
 				<div class="switch__content">
 					<div class="switch__btn"></div>
 				</div>
@@ -244,8 +258,10 @@
 
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="./script/switchThemes.js" defer=""></script>
+	<script src="./script/openBurgerMenu.js" defer=""></script>
 	<script src="./script/slider.js" defer=""></script>
 	<script src="./script/bikes.js" defer=""></script>
+	<script src="./script/sendEmail.js" defer=""></script>
 
 </body>
 
