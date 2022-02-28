@@ -4,9 +4,9 @@ const bikesHighway = document.querySelector("#bikes-highway");
 const bikesGravel = document.querySelector("#bikes-gravel");
 const bikesTt = document.querySelector("#bikes-tt");
 const bikeList = document.querySelector(".bike__list");
-const bikePlaceHighway = document.querySelector(".bike_place_highway");
-const bikePlaceGravel = document.querySelector(".bike_place_gravel");
-const bikePlaceTt = document.querySelector(".bike_place_tt");
+const bikePlaceHighway = document.querySelector(".bike__tipe_place_highway");
+const bikePlaceGravel = document.querySelector(".bike__tipe_place_gravel");
+const bikePlaceTt = document.querySelector(".bike__tipe_place_tt");
 
 function activeBikeSliders() {
 	for (slide of bikeSliders) {

@@ -3,7 +3,7 @@
 	flex-direction: column;
 	row-gap: 50px;
 	box-sizing: border-box;
-	height: 424px;
+	min-height: 424px;
 	padding: 80px 0 60px 120px;
 	background-color: #efefef;
 
@@ -144,7 +144,7 @@
 @media all and (max-width: $tablets) {
 	.footer {
 		row-gap: 40px;
-		height: 358px;
+		min-height: 358px;
 		padding: 60px 18px 25px;
 
 		&__title {

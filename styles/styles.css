@@ -504,7 +504,7 @@ template {
 
 @media all and (max-width: 1200px) {
   .main {
-    padding: 74px 18px 60px;
+    padding: 34px 18px 60px;
   }
 }
 @media all and (max-width: 768px) {
@@ -595,9 +595,10 @@ template {
   position: relative;
   order: 5;
   justify-self: end;
-  width: 100%;
+  width: 42.36%;
   max-width: 610px;
   height: 100%;
+  max-height: 836px;
   background-image: url("../images/leadimage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -611,14 +612,14 @@ template {
   box-sizing: border-box;
   max-width: 440px;
   height: 300px;
-  margin-top: 347px;
+  margin-top: 370px;
   margin-bottom: 79px;
   padding: 20px 50px;
   background-color: #f4f4f4;
-  background-image: url("../images/CannondaleSystemsixHimod.jpg");
+  background-image: url("../images/leadbike.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: auto;
   border-radius: 20px;
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
   transform: translate(-200px, 0);
@@ -677,6 +678,7 @@ template {
   }
   .lead__image {
     max-width: 474px;
+    max-height: 651px;
   }
   .lead__sticky-block {
     max-width: 320px;
@@ -684,6 +686,7 @@ template {
     margin-top: 200px;
     margin-bottom: 40px;
     padding: 11px 27px;
+    background-size: 266px 198px;
     transform: translate(-30px, 0);
   }
 }
@@ -693,6 +696,7 @@ template {
   }
   .lead__image {
     max-width: 373px;
+    max-height: 512px;
   }
   .lead__caption {
     display: none;
@@ -721,9 +725,10 @@ template {
   .lead__sticky-block {
     max-width: 234px;
     height: 160px;
-    margin-top: 123px;
-    margin-bottom: 37px;
+    margin-top: 150px;
+    margin-bottom: 27px;
     padding: 11px 27px;
+    background-size: 180px 140px;
     transform: translate(-30px, 0);
   }
 }
@@ -1198,11 +1203,12 @@ template {
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 50px;
-  height: 460px;
+  min-height: 460px;
 }
 .training__links {
   display: flex;
   order: 3;
+  max-width: 440px;
   justify-self: end;
   margin-top: 130px;
   -moz-column-gap: 30px;
@@ -1226,16 +1232,22 @@ template {
   order: 4;
   align-self: flex-end;
   min-width: 44%;
+  height: 100%;
   max-height: 460px;
   margin-right: 120px;
   -o-object-fit: cover;
      object-fit: cover;
+  background-image: url("../images/trainig-road.jfif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media all and (max-width: 768px) {
   .training {
     flex-wrap: nowrap;
     row-gap: 40px;
+    min-height: auto;
     height: auto;
   }
   .training__links {
@@ -1251,13 +1263,14 @@ template {
     align-self: center;
     width: 100%;
     min-width: 44%;
-    max-height: 225px;
+    min-height: 225px;
     margin: 0;
   }
 }
 @media all and (max-width: 375px) {
   .training__image {
     width: 284px;
+    height: 225px;
   }
 }
 .footer {
@@ -1265,7 +1278,7 @@ template {
   flex-direction: column;
   row-gap: 50px;
   box-sizing: border-box;
-  height: 424px;
+  min-height: 424px;
   padding: 80px 0 60px 120px;
   background-color: #efefef;
 }
@@ -1430,7 +1443,7 @@ template {
 @media all and (max-width: 768px) {
   .footer {
     row-gap: 40px;
-    height: 358px;
+    min-height: 358px;
     padding: 60px 18px 25px;
   }
   .footer__title {

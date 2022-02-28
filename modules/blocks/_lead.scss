@@ -10,9 +10,10 @@
 		position: relative;
 		order: 5;
 		justify-self: end;
-		width: 100%;
+		width: 42.36%;
 		max-width: 610px;
 		height: 100%;
+		max-height: 836px;
 		background-image: url("../images/leadimage.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -25,14 +26,14 @@
 		box-sizing: border-box;
 		max-width: 440px;
 		height: 300px;
-		margin-top: 347px;
+		margin-top: 370px;
 		margin-bottom: 79px;
 		padding: 20px 50px;
 		background-color: $primary-color;
-		background-image: url("../images/CannondaleSystemsixHimod.jpg");
+		background-image: url("../images/leadbike.jpg");
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: contain;
+		background-size: auto;
 		border-radius: 20px;
 		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
 		transform: translate(-200px, 0);
@@ -95,6 +96,7 @@
 
 		&__image {
 			max-width: 474px;
+			max-height: 651px;
 		}
 
 		&__sticky-block {
@@ -103,6 +105,7 @@
 			margin-top: 200px;
 			margin-bottom: 40px;
 			padding: 11px 27px;
+			background-size: 266px 198px;
 			transform: translate(-30px, 0);
 		}
 	}
@@ -114,6 +117,7 @@
 
 		&__image {
 			max-width: 373px;
+			max-height: 512px;
 		}
 
 		&__caption {
@@ -148,9 +152,10 @@
 		&__sticky-block {
 			max-width: 234px;
 			height: 160px;
-			margin-top: 123px;
-			margin-bottom: 37px;
+			margin-top: 150px;
+			margin-bottom: 27px;
 			padding: 11px 27px;
+			background-size: 180px 140px;
 			transform: translate(-30px, 0);
 		}
 	}
