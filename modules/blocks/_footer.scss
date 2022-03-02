@@ -87,6 +87,7 @@
 	}
 
 	&__button {
+		@include resetStyles;
 		display: none;
 		color: inherit;
 		font-weight: $mediumFont;
@@ -95,7 +96,7 @@
 		background-color: inherit;
 		border: none;
 
-		@include resetStyles;
+
 
 		&_active {
 			display: block;

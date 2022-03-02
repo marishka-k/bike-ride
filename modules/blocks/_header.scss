@@ -14,9 +14,8 @@
 	background-color: inherit;
 
 	&__list {
-		display: none;
-
 		@include resetStyles;
+		display: none;
 		color: inherit;
 		font-weight: $mediumFont;
 		font-size: 14px;
