@@ -140,7 +140,7 @@
 		font-size: 18px;
 		line-height: 1.22;
 		text-decoration: none;
-		color: $primary-text-color;
+		color: inherit;
 	}
 }
 
@@ -179,6 +179,7 @@
 			justify-self: center;
 			font-size: 14px;
 			line-height: 1.29;
+			color: $primary-text-color;
 		}
 	}
 }

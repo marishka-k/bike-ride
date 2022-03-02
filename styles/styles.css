@@ -1116,7 +1116,7 @@ template {
   font-size: 18px;
   line-height: 1.22;
   text-decoration: none;
-  color: #151515;
+  color: inherit;
 }
 
 @media all and (max-width: 1200px) {
@@ -1148,6 +1148,7 @@ template {
     justify-self: center;
     font-size: 14px;
     line-height: 1.29;
+    color: #151515;
   }
 }
 @media all and (max-width: 768px) {
