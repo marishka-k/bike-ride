@@ -187,6 +187,7 @@
 @media all and (max-width: $tablets) {
 	.bike {
 		row-gap: 20px;
+		border-top: 1px solid #e3e3e3;
 
 		&__menu {
 			flex-direction: column;
