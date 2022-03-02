@@ -1,18 +1,16 @@
 .training {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template: repeat(3, auto) / 40% 1fr;
 	row-gap: 50px;
-	min-height: 460px;
 
 	&__links {
 		display: flex;
 		order: 3;
 		max-width: 440px;
-		justify-self: end;
 		margin-top: 130px;
 		column-gap: 30px;
-
+		grid-column: 1/1;
+		grid-row: 3/3;
 	}
 
 	&__link {
@@ -31,10 +29,10 @@
 	}
 
 	&__image {
-		order: 4;
-		align-self: flex-end;
-		min-width: 44%;
-		height: 100%;
+		grid-column: -2/-1;
+		grid-row: 1/-1;
+		justify-self: flex-end;
+		width: 73%;
 		max-height: 460px;
 		margin-right: 120px;
 		object-fit: cover;
@@ -47,14 +45,12 @@
 
 @media all and (max-width: $tablets) {
 	.training {
-		flex-wrap: nowrap;
+		grid-template: repeat(4, auto) / 1fr;
 		row-gap: 40px;
-		min-height: auto;
-		height: auto;
 		border-top: 1px solid #e3e3e3;
 
 		&__links {
-			order: 4;
+			grid-row: 4/4;
 			margin-top: 0;
 		}
 
@@ -64,7 +60,8 @@
 		}
 
 		&__image {
-			order: 2;
+			grid-column: 1/1;
+		grid-row: 2/2;
 			align-self: center;
 			width: 100%;
 			min-width: 44%;
