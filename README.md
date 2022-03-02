@@ -16,3 +16,6 @@
 
 5. БЭМ
 
+### адрес страницы
+
+https://marishka-k.github.io/bike-ride/
