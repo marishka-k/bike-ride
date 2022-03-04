@@ -1,0 +1,185 @@
+.coverage {
+	width: 100%;
+
+	&__slider {
+		overflow: hidden;
+	}
+
+	&__cards {
+		@include resetStyles;
+		position: relative;
+		display: flex;
+		grid-area: coverage__cards;
+		max-width: 1320px;
+		list-style-type: none;
+		transition: all ease 1s;
+	}
+
+	&__card {
+		display: none;
+
+		&_active {
+			display: flex;
+			flex-direction: column;
+			row-gap: 50px;
+		}
+	}
+
+	&__images {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		order: 3;
+		gap: 40px;
+	}
+
+	&__image {
+		display: flex;
+		object-fit: cover;
+		width: 100%;
+	}
+	&__image-highway {
+		position: relative;
+
+		&::after {
+			content: "";
+			@include coverageIcon;
+			background-image: url(../images/highway-icon.png);
+		}
+	}
+
+	&__image-gravel {
+		position: relative;
+
+		&::after {
+			content: "";
+			@include coverageIcon;
+			background-image: url(../images/gravel-icon.png);
+		}
+	}
+
+	&__image-tt {
+		position: relative;
+
+		&::after {
+			content: "";
+			@include coverageIcon;
+			background-image: url(../images/tt-icon.png);
+		}
+	}
+
+	&__second-image {
+		display: block;
+	}
+
+	&__buttons {
+		display: flex;
+		grid-area: coverage-buttons;
+		order: 5;
+		margin-top: 5px;
+		column-gap: 20px;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background-color: #ebebeb;
+		border: none;
+		border-radius: 50%;
+		transition: background-color 0.2s linear;
+		object-fit: cover;
+
+		&:hover {
+			background-color: rgba(235, 235, 235, 0.6);
+		}
+	}
+
+	&__button-image {
+		display: block;
+		width: 7px;
+		height: 16px;
+		padding: 21px;
+		transition: $transition-opacity;
+
+		&:hover {
+			opacity: $primary-opacity;
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.coverage {
+		&__card {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			border-top: 1px solid #e3e3e3;
+
+			&_active {
+				row-gap: 40px;
+			}
+		}
+
+		&__images {
+			grid-template-columns: 1fr;
+			width: 100%;
+		}
+
+		&__second-image {
+			display: none;
+		}
+
+		&__image-highway {
+			&::after {
+				content: "";
+				@include coverageIconMobile;
+			}
+		}
+
+		&__image-gravel {
+			&::after {
+				content: "";
+				@include coverageIconMobile;
+			}
+		}
+
+		&__image-tt {
+			&::after {
+				content: "";
+				@include coverageIconMobile;
+			}
+		}
+
+		&__buttons {
+			order: 1;
+			align-self: end;
+			margin: 0;
+			margin-top: 0;
+			margin-bottom: 7px;
+			column-gap: 10px;
+		}
+
+		&__button {
+			width: 24px;
+			height: 24px;
+		}
+
+		&__button-image {
+			width: 4.5px;
+			height: 10px;
+		}
+	}
+}
+
+@media all and (max-width: $phones-small) {
+	.coverage {
+		&__image {
+			width: 284px;
+			height: 175px;
+		}
+	}
+}

@@ -1,0 +1,239 @@
+.bike {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	padding-right: 120px;
+
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__tipes {
+		display: flex;
+		order: 2;
+		column-gap: 40px;
+	}
+
+	&__tipe {
+		@include resetStyles;
+		color: $secordary-text-color;
+		font-weight: $semiboldFont;
+		font-size: 18px;
+		line-height: 1.56;
+		background-color: inherit;
+		border: none;
+		cursor: pointer;
+		opacity: 0.7;
+		transition: opacity 0.5s linear;
+
+		&:hover {
+			opacity: $secordary-opacity;
+		}
+
+		&_theme_dark {
+			color: $secordary-text-color-dark;
+
+			&:hover {
+				opacity: $secordary-opacity-dark;
+			}
+		}
+
+		&_theme_dark-active {
+			&:hover {
+				opacity: $primary-opacity-dark;
+			}
+		}
+
+		&_active {
+			color: inherit;
+			font-weight: $semiboldFont;
+			opacity: 1;
+
+			&:hover {
+				opacity: $primary-opacity;
+			}
+		}
+	}
+
+	&__list {
+		@include resetStyles;
+		display: none;
+		order: 2;
+		width: 114px;
+		height: 30px;
+		color: inherit;
+		font-weight: $semiboldFont;
+		font-size: 11px;
+		line-height: 1.27;
+		background-color: inherit;
+		border-color: #e3e3e3;
+		border-radius: 2px;
+
+	}
+
+	&__list-item {
+		color: inherit;
+		background-color: $primary-color;
+
+		&_theme_dark {
+			background-color: $primary-color-dark;
+		}
+	}
+
+	&__sliders {
+		@include resetStyles;
+		position: relative;
+		display: none;
+		overflow: hidden;
+
+		& .swiper-pagination {
+			bottom: 0;
+			z-index: 0;
+		}
+
+		& .swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+		}
+
+		& .swiper-pagination-bullet-active {
+			background: $primary-text-color;
+		}
+
+		&_active {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		box-sizing: border-box;
+		width: 100%;
+		margin-top: 120px;
+		margin-bottom: 90px;
+	}
+
+	&__card {
+		display: grid;
+		row-gap: 22px;
+		box-sizing: border-box;
+		height: min-content;
+		min-height: 0;
+	}
+
+	&__image {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 20px;
+		background-color: $primary-color;
+		border-radius: 20px;
+		box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+		object-fit: cover;
+	}
+
+	&__link {
+		@include resetStyles;
+		font-weight: $semiboldFont;
+		font-size: 18px;
+		line-height: 1.22;
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+@media all and (max-width: $desctop) {
+	.bike {
+		padding-right: 0;
+	}
+}
+
+@media all and (max-width: $laptop) {
+	.bike {
+		&__cards {
+			margin-top: 90px;
+			margin-bottom: 40px;
+		}
+
+		&__card {
+			row-gap: 0;
+			padding: 15px;
+			background-color: $primary-color;
+			border-radius: 20px;
+			box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+		}
+
+		&__tipes {
+			margin-right: 40px;
+		}
+
+		&__image {
+			padding: 0;
+			box-shadow: none;
+		}
+
+		&__link {
+			justify-self: center;
+			font-size: 14px;
+			line-height: 1.29;
+			color: $primary-text-color;
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.bike {
+		row-gap: 20px;
+		border-top: 1px solid #e3e3e3;
+
+		&__menu {
+			flex-direction: column;
+			row-gap: 40px;
+		}
+
+		&__tipes {
+			display: none;
+		}
+
+		&__list {
+			display: block;
+		}
+
+		&__sliders {
+			padding-bottom: 30px;
+
+			& .swiper-pagination {
+				bottom: 0;
+			}
+
+			& .swiper-pagination-bullet {
+				width: 4px;
+				height: 4px;
+			}
+		}
+
+		&__image {
+			justify-self: center;
+		}
+
+		&__link {
+			font-size: 14px;
+			line-height: 1.29;
+		}
+
+		&__cards {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media all and (max-width: $phones) {
+	.bike {
+		&__cards {
+			max-width: 284px;
+		}
+	}
+}

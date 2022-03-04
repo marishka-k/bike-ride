@@ -1,0 +1,81 @@
+.merckx {
+	display: grid;
+	grid-template-columns: 50% 1fr;
+	gap: 70px;
+
+	&__image {
+		width: 100%;
+		max-width: 650px;
+		height: 460px;
+		object-fit: cover;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 470px;
+	}
+
+	&__word {
+		@include resetStyles;
+		font-weight: $semiboldFont;
+		font-size: 34px;
+		line-height: 1.29;
+		letter-spacing: -0.5px;
+	}
+
+	&__name {
+		@include resetStyles;
+		font-weight: $mediumFont;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	&__profession {
+		@include resetStyles;
+		margin-bottom: 10px;
+		color: $secordary-text-color;
+		font-weight: $regularFont;
+		font-size: 16px;
+		line-height: 1.75;
+		opacity: $primary-opacity;
+
+		&_theme_dark {
+			color: $secordary-text-color-dark;
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.merckx {
+		grid-template-columns: 1fr;
+		gap: 40px;
+
+		&__word {
+			@include resetStyles;
+			margin-bottom: 40px;
+			font-weight: $semiboldFont;
+			font-size: 23px;
+			line-height: 1.26;
+			letter-spacing: -0.5px;
+		}
+
+		&__name {
+			font-size: 14px;
+			line-height: 1.57;
+		}
+
+		&__profession {
+			margin-bottom: 0;
+			font-size: 10px;
+			line-height: 1.6;
+		}
+
+		&__image {
+			max-height: 204px;
+			padding-top: 20px;
+			border-top: 1px solid #e3e3e3;
+		}
+	}
+}

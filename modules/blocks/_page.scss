@@ -1,0 +1,16 @@
+.page {
+	position: relative;
+	box-sizing: border-box;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	color: $primary-text-color;
+	font-family: $font-family-primary;
+	background-color: $primary-color;
+	transition: all 0.5s linear;
+
+	&_theme_dark {
+		color: $primary-text-color-dark;
+		background-color: $primary-color-dark;
+	}
+}

@@ -1,0 +1,81 @@
+.training {
+	display: grid;
+	grid-template: repeat(3, auto) / 40% 1fr;
+	row-gap: 50px;
+
+	&__links {
+		display: flex;
+		order: 3;
+		max-width: 440px;
+		margin-top: 130px;
+		column-gap: 30px;
+		grid-column: 1/1;
+		grid-row: 3/3;
+	}
+
+	&__link {
+		@include resetStyles;
+		display: flex;
+		color: inherit;
+		font-weight: $semiboldFont;
+		font-size: 18px;
+		line-height: 1.56;
+		text-decoration: none;
+		transition: $transition-opacity;
+
+		&:hover {
+			opacity: $secordary-opacity-dark;
+		}
+	}
+
+	&__image {
+		grid-column: -2/-1;
+		grid-row: 1/-1;
+		justify-self: flex-end;
+		width: 73%;
+		max-height: 460px;
+		margin-right: 120px;
+		object-fit: cover;
+		background-image: url("../images/trainig-road.jfif");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.training {
+		grid-template: repeat(4, auto) / 1fr;
+		row-gap: 40px;
+		border-top: 1px solid #e3e3e3;
+
+		&__links {
+			grid-row: 4/4;
+			margin-top: 0;
+		}
+
+		&__link {
+			font-size: 14px;
+			line-height: 1.43;
+		}
+
+		&__image {
+			grid-column: 1/1;
+		grid-row: 2/2;
+			align-self: center;
+			width: 100%;
+			min-width: 44%;
+			min-height: 225px;
+			margin: 0;
+		}
+	}
+}
+
+@media all and (max-width: $phones-small) {
+	.training {
+		&__image {
+			width: 284px;
+			height: 225px;
+		}
+	}
+}

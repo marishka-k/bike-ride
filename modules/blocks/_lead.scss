@@ -1,0 +1,171 @@
+.lead {
+	display: grid;
+	grid-template: repeat(4, auto) / 40% 1fr;
+	gap: 50px;
+
+	&__text {
+		min-width: min-content;
+		max-width: 430px;
+		padding-top: 80px;
+	}
+
+	&__button {
+		grid-column: 1 / 1;
+		grid-row: 3 / 3;
+		width: 180px;
+		height: 50px;
+		color: $primary-text-color-dark;
+		background: linear-gradient(to left, #24b47e 50%, #319e75 50%) right;
+		background-size: 200%;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-position 0.5s ease-out;
+
+		&:hover {
+			background-position: left;
+		}
+	}
+
+	&__caption {
+		@include resetStyles;
+		display: flex;
+		grid-column: 1 / 1;
+		grid-row: 4 / 4;
+		margin-top: 117px;
+		margin-bottom: 209px;
+		align-self: baseline;
+		font-weight: $regularFont;
+		font-size: 18px;
+		line-height: 1;
+
+		&::after {
+			display: flex;
+			align-self: center;
+			width: 132px;
+			height: 2px;
+			margin-left: 30px;
+			background-color: #d7d4d4;
+			content: "";
+		}
+	}
+
+	&__image {
+		position: relative;
+		grid-column: -2 / -1;
+		grid-row: 1 / -1;
+		justify-self: end;
+		width: 100%;
+		max-width: 610px;
+		height: 100%;
+		max-height: 836px;
+		background-image: url("../images/leadimage.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		object-fit: cover;
+	}
+
+	&__sticky-block {
+		position: sticky;
+		top: 0;
+		left: 0;
+		box-sizing: border-box;
+		max-width: 440px;
+		height: 300px;
+		margin-top: 370px;
+		margin-bottom: 79px;
+		padding: 20px 50px;
+		background-color: $primary-color;
+		background-image: url("../images/leadbike.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto;
+		border-radius: 20px;
+		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
+		transform: translate(-200px, 0);
+		object-fit: cover;
+	}
+}
+
+@media all and (max-width: $desctop) {
+	.lead {
+		&__caption {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		&__image {
+			max-width: 474px;
+			max-height: 651px;
+		}
+
+		&__sticky-block {
+			max-width: 320px;
+			height: 220px;
+			margin-top: 200px;
+			margin-bottom: 40px;
+			padding: 11px 27px;
+			background-size: 266px 198px;
+			transform: translate(-30px, 0);
+		}
+	}
+}
+
+@media all and (max-width: $laptop) {
+	.lead {
+		&__image {
+			max-width: 373px;
+			max-height: 512px;
+		}
+
+		&__caption {
+			display: none;
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.lead {
+		grid-template: repeat(4, auto) / 1fr;
+		gap: 40px;
+
+		&__button {
+			width: 100%;
+			height: 46px;
+			grid-row: 4 / 4;
+		}
+
+		&__image {
+			grid-column: 1 / 1;
+			grid-row: 2 / 2;
+			width: 100%;
+			max-width: 100%;
+			height: 348px;
+			background-position-y: center;
+		}
+
+		&__caption {
+			display: none;
+		}
+
+		&__sticky-block {
+			max-width: 234px;
+			height: 160px;
+			margin-top: 150px;
+			margin-bottom: 27px;
+			padding: 11px 27px;
+			background-size: 180px 140px;
+			transform: translate(-30px, 0);
+		}
+	}
+}
+
+@media all and (max-width: $phones-small) {
+	.lead {
+		&__image {
+			width: 254px;
+			background-position-y: center;
+			background-size: contain;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+.header {
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: inherit;
+	min-height: 74px;
+	margin: 0 auto;
+	padding: 28px 0;
+	background-color: inherit;
+
+	&__list {
+		@include resetStyles;
+		display: none;
+		color: inherit;
+		font-weight: $mediumFont;
+		font-size: 14px;
+		line-height: 1.29;
+		list-style-type: none;
+
+		&_plase_header {
+			display: grid;
+			grid-template-columns: repeat(3, max-content);
+			gap: 34px;
+			padding-right: 120px;
+		}
+
+		&_plase_burger {
+			display: none;
+			font-size: 18px;
+			line-height: 1;
+			background-color: $primary-color;
+
+
+			&_theme_dark {
+				background-color: $primary-color-dark;
+			}
+		}
+
+		&_plase_burger-active {
+			display: flex;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+		transition: $transition-opacity;
+
+		&:hover {
+			opacity: $primary-opacity;
+		}
+	}
+
+	&__burger {
+		display: none;
+	}
+
+	&__burger-open {
+		display: none;
+		width: 22px;
+		height: 19px;
+		background-image: url(../images/burger-light.svg);
+
+		&_theme_dark {
+			background-image: url(../images/burger-dark.svg);
+		}
+
+		&_active {
+			display: block;
+			cursor: pointer;
+			transition: $transition-opacity;
+
+			&:hover {
+				opacity: $secordary-opacity;
+			}
+		}
+	}
+
+	&__burger-close {
+		display: none;
+		width: 22px;
+		height: 22px;
+		background-image: url(../images/closeburger-light.svg);
+
+		&_theme_dark {
+			background-image: url(../images/closeburger-dark.svg);
+		}
+
+		&_active {
+			display: block;
+			background-position: center;
+			cursor: pointer;
+			transition: $transition-opacity;
+
+			&:hover {
+				opacity: $secordary-opacity;
+			}
+		}
+	}
+}
+
+@media all and (max-width: $tablets) {
+	.header {
+		padding: 0 18px;
+
+		&__list {
+			&_plase_header {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@media all and (max-width: $phones) {
+	.header {
+		&__list {
+			&_plase_header {
+				display: none;
+			}
+
+			&_plase_burger {
+				position: absolute;
+				top: 74px;
+				right: 0;
+				left: 0;
+				flex-direction: column;
+				align-items: center;
+				row-gap: 34px;
+				width: 100%;
+				height: 566px;
+				margin: 0 auto;
+				padding: 70px 0 0;
+			}
+		}
+
+		&__burger {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

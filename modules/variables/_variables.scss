@@ -1,0 +1,32 @@
+//переменные фона
+$primary-color: #f4f4f4;
+$primary-color-dark: #333333;
+
+//переменные текста
+$primary-text-color: #151515;
+$secordary-text-color: #222222;
+$primary-text-color-dark: #ffffff;
+$secordary-text-color-dark: #e5e5e5;
+
+//переменные прозрачности
+$primary-opacity: 0.75;
+$secordary-opacity: 0.6;
+$primary-opacity-dark: 0.65;
+$secordary-opacity-dark: 0.5;
+$transition-opacity: opacity 0.2s linear;
+
+// начертание шрифта
+$regularFont: 400;
+$mediumFont: 500;
+$semiboldFont: 600;
+$boldFont: 700;
+
+//шриФТ
+$font-family-primary: "Inter", "Arial", sans-serif;
+
+// размеры дисплея
+$desctop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+$phones-small: 375px;
