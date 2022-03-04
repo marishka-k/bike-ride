@@ -384,7 +384,7 @@ template {
   box-sizing: border-box;
   width: 100%;
   max-width: inherit;
-  height: 74px;
+  min-height: 74px;
   margin: 0 auto;
   padding: 28px 0;
   background-color: inherit;
@@ -845,10 +845,10 @@ template {
      object-fit: cover;
   width: 100%;
 }
-.coverage__image_type_highway {
+.coverage__image-highway {
   position: relative;
 }
-.coverage__image_type_highway::after {
+.coverage__image-highway::after {
   content: "";
   position: absolute;
   bottom: 16px;
@@ -858,10 +858,10 @@ template {
   background-size: cover;
   background-image: url(../images/highway-icon.png);
 }
-.coverage__image_type_gravel {
+.coverage__image-gravel {
   position: relative;
 }
-.coverage__image_type_gravel::after {
+.coverage__image-gravel::after {
   content: "";
   position: absolute;
   bottom: 16px;
@@ -871,10 +871,10 @@ template {
   background-size: cover;
   background-image: url(../images/gravel-icon.png);
 }
-.coverage__image_type_tt {
+.coverage__image-tt {
   position: relative;
 }
-.coverage__image_type_tt::after {
+.coverage__image-tt::after {
   content: "";
   position: absolute;
   bottom: 16px;
@@ -941,7 +941,7 @@ template {
   .coverage__second-image {
     display: none;
   }
-  .coverage__image_type_highway::after {
+  .coverage__image-highway::after {
     content: "";
     position: absolute;
     bottom: 14px;
@@ -949,7 +949,7 @@ template {
     width: 70px;
     height: 28px;
   }
-  .coverage__image_type_gravel::after {
+  .coverage__image-gravel::after {
     content: "";
     position: absolute;
     bottom: 14px;
@@ -957,7 +957,7 @@ template {
     width: 70px;
     height: 28px;
   }
-  .coverage__image_type_tt::after {
+  .coverage__image-tt::after {
     content: "";
     position: absolute;
     bottom: 14px;

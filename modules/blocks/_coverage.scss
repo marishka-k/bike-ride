@@ -36,35 +36,34 @@
 		display: flex;
 		object-fit: cover;
 		width: 100%;
+	}
+	&__image-highway {
+		position: relative;
 
-		&_type_highway {
-			position: relative;
-
-			&::after {
-				content: '';
-				@include coverageIcon;
-				background-image: url(../images/highway-icon.png);
-			}
+		&::after {
+			content: "";
+			@include coverageIcon;
+			background-image: url(../images/highway-icon.png);
 		}
+	}
 
-		&_type_gravel {
-			position: relative;
+	&__image-gravel {
+		position: relative;
 
-			&::after {
-				content: '';
-				@include coverageIcon;
-				background-image: url(../images/gravel-icon.png);
-			}
+		&::after {
+			content: "";
+			@include coverageIcon;
+			background-image: url(../images/gravel-icon.png);
 		}
+	}
 
-		&_type_tt {
-			position: relative;
+	&__image-tt {
+		position: relative;
 
-			&::after {
-				content: '';
-				@include coverageIcon;
-				background-image: url(../images/tt-icon.png);
-			}
+		&::after {
+			content: "";
+			@include coverageIcon;
+			background-image: url(../images/tt-icon.png);
 		}
 	}
 
@@ -134,26 +133,24 @@
 			display: none;
 		}
 
-		&__image {
-			&_type_highway {
-				&::after {
-					content: '';
-					@include coverageIconMobile;
-				}
+		&__image-highway {
+			&::after {
+				content: "";
+				@include coverageIconMobile;
 			}
+		}
 
-			&_type_gravel {
-				&::after {
-					content: '';
-					@include coverageIconMobile;
-				}
+		&__image-gravel {
+			&::after {
+				content: "";
+				@include coverageIconMobile;
 			}
+		}
 
-			&_type_tt {
-				&::after {
-					content: '';
-					@include coverageIconMobile;
-				}
+		&__image-tt {
+			&::after {
+				content: "";
+				@include coverageIconMobile;
 			}
 		}
 
